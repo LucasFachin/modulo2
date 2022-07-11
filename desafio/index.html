@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+</head>
+<body>
+    <script>
+        const jogador = prompt("Qual o seu nome?")
+        alert("ola "+jogador+", seja bem vindo ")
+
+        let op = 10 
+        let cont = 0 
+        let pontuacao = 0
+        let resposta
+        
+            op = parseInt(prompt("escolha um tema \n 1 - jogos \n 2 - filme \n 3 - serie \n 0 - Sair"))
+        
+
+        switch(op){
+                case 1: jogos()
+                break
+            }
+            switch(op){
+                case 2: filme()
+                break
+            }
+            switch(op){
+                case 3: serie()
+                break
+            }
+            
+            switch(op){
+                case 0:
+                    alert("Você saiu!!")
+                    break
+            }
+
+        function jogos(){
+            resposta = prompt("o astroneer ganhou o premio de melhor jogo do ano em  2021? falso ou verdadeiro")
+                        if(resposta == "falso"){
+                            alert("resposta certa, vc e um gamer")
+                            pontuacao++
+                        }else{
+                            alert("resposta errada,o jogo que ganhou o premio do jogo do ano foi It Takes Two")
+                        }
+                        resposta = prompt("Qual mob do minecraft possui mais vida?")
+                        if(resposta == "Whiter"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta,")
+                        }              
+        }
+        function filme(){
+            resposta = prompt("Qual é o filme mais assistido do mundo 2021?")
+                        if(resposta == "luca"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta, Segundo a Nielsen, a animação da Pixar Luca, Disney+, foi o filme mais assistido de 2021, com mais de 10,5 bilhões de minutos transmitidos.")
+                        }              
+        }
+        function serie(){
+            resposta = prompt("Quem planeou o assalto em La Casa de Papel? (demasiado fácil, certo?) Nairobi,Berlin,Rio,Professor")
+                        if(resposta == "Professor"){
+                            alert("Resposta certa, parabéns!!")
+                            pontuacao++
+                        }else{
+                            alert("Resposta incorreta,")
+                        } 
+        }
+        alert(`${jogador}, sua pontuação final foi: ${pontuacao}`)
+                        pontuacao = 0
+                        
+    </script>
+</body>
+</html>
